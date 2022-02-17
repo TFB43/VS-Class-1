@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const original = 'todd';
+const clone     ='TODD';
+
+console.group('string');
+        console.log(original == 'todd');
+        console.log(original == clone);
+        console.log(original == clone.toLowerCase());
+console.groupEnd();        
+
+const num1 = 10;
+const num2 = '10';
+
+console.group('Numbers');
+        console.log(num1 == num2);
+        console.log(num1 === num2);
+        console.log(num1 != num2);
+        console.log(num1 !== num2);
+console.groupEnd();        
+
+
+let what;
+let thing = null;
+
+console.group('Booleans');
+        console.log(Boolean(what));
+        console.log(Boolean(thing));
+        console.log(Boolean(num1));
+        console.log(Boolean(num2));
+console.groupEnd();
+
+const firstArr = [1 ,2 ,3];
+const secondArr = [1, 2, 3,];
+const firstObj = {color: 'red'};
+const secondObj = {color: 'red'};
+
+console.groupCollapsed('And Or');
+    console.log(Boolean('blah') && Boolean('thing'));
+    console.log(Boolean('blah') && Boolean(''));
+    console.log(Boolean('blah') || Boolean(''));
+    console.log(Boolean('') || Boolean(''));
+    console.log(Boolean('blah') || Boolean(''));
+console.groupEnd();
+
+console.groupCollapsed('Special Comparison');
+        console.log(undefined == null); //true
+        console.log(undefined === null); //false
+console.groupEnd();
+
+let llun;
+console.log(llun);
+
+
+    
+    </script>
+</body>
+</html>
