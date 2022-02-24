@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body onload="todayTime()">
+    <div>
+        <h2>JavaScript Clock</h2>
+    </div>
+    
+    <div id = display></div>
+    
+</body>
+<script>
+  function todayTime() {
+
+ let today = new Date();
+ let hours = today.getHours();
+ let min = today.getMinutes();
+ let sec = today.getSeconds();
+ let milsec = today.getMilliseconds();
+ 
+ 
+ document.getElementById("display").innerText = hours + ":" + min + ":" + sec + ":" + milsec ;
+
+setTimeout(todayTime, 1000);
+
+  }  
+    
+  
+    
+    
+    
+    
+    </script>
+</html>
