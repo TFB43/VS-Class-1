@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="drink"></p>
+<script>
+
+function jump() {
+  var height = 10;
+
+  function scream() {
+    console.log(height);
+  }
+
+  scream();
+}
+
+jump(); // logs 10
+
+function parent(x) {
+  return function closure() {
+    // Closure is declared here.
+    return x;
+  };
+}
+
+const remember = parent("remembers me");
+// Seems like the variable x would be gone after
+// parent is executed, but it's not.
+
+console.log (remember());
+// Returns "remembers me" because the inner
+// function remembers x.
+
+const drinks = [
+  { name: "lemonade", price: 50 },
+  { name: "lime", price: 10 },
+];
+//document.getElementById(drink).innerHTML="<li>" + drinks.sort();+"</li>";
+drinks.sort(function(a,b){return a-b});
+console.log(drinks);
+   </script> 
+</body>
+</html>
