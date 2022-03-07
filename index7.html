@@ -42,7 +42,8 @@ const drinks = [
   { name: "lemonade", price: 50 },
   { name: "lime", price: 10 },
 ];
-//document.getElementById(drink).innerHTML="<li>" + drinks.sort();+"</li>";
+document.getElementById("drink").innerHTML=drinks.sort();
+
 drinks.sort(function(a,b){return a-b});
 console.log(drinks);
    </script> 
