@@ -39,13 +39,24 @@ console.log (remember());
 // function remembers x.
 
 const drinks = [
-  { name: "lemonade", price: 50 },
-  { name: "lime", price: 10 },
+  { name: "Lemonade", price: 50 },
+  { name: "Lime", price: 10 },
 ];
-document.getElementById("drink").innerHTML=drinks.sort();
-
-drinks.sort(function(a,b){return a-b});
+//document.getElementById("drink").innerHTML=drinks.sort(function(a,b){return a.price-b.price});
+//loop over list item bookmark class
+//drinks.sort(function(a,b){return a.price-b.price});
 console.log(drinks);
+
+let list = document.getElementById("drink");
+drinks.forEach((item)=>{
+  let li = document.createElement("li");
+  li.innerHTML="Name: "+ item.name + "<li> "+ "Price:  $" + item.price;
+  list.appendChild(li);
+  console.log(item)
+});
+
+
+
    </script> 
 </body>
 </html>
