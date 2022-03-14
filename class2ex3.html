@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class2 Exercise 3</title>
+</head>
+<body>
+    
+    <li id="multiples"></li>
+    
+    <Script>
+
+
+const arrayOfMultiples = (a, b) => {
+    let arr = [];
+    let x =1;
+    for(let i=1; i<=b; i++) {
+        arr.push (a * x);
+        x++;
+    }
+    return arr;
+}
+ console.log(arrayOfMultiples(7,5));
+ console.log(arrayOfMultiples(12,10));
+ console.log(arrayOfMultiples(17,6));
+document.getElementById("multiples").innerHTML=arrayOfMultiples(5,7)+"<li>" + arrayOfMultiples(12,10) + "<li>"+arrayOfMultiples(17,6);
+
+    </Script>
+</body>
+</html> 
