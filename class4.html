@@ -36,7 +36,9 @@
  let min = today.getMinutes();
  let sec = today.getSeconds();
  //let milsec = today.getMilliseconds();
- 
+ if(sec <10){
+     sec = "0" + sec;
+ }
  
  document.getElementById("display").innerText = hours + ":" + min + ":" + sec;
 
